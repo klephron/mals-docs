@@ -62,6 +62,18 @@ LSP:
 
 ## Tests
 
-### VSCode Extension
+В данном разделе представлены отчеты о тестировании и их описание.
+
+### `mals-vscode`
 
 ![](./tests/mals-vscode-test-report.png)
+
+- `Extension Tests` - тесты возможностей запущенного расширения
+- `Configuration Tests` - тесты конфигурации расширения
+- `Activation Tests` - модульные тесты процесса активации расширения
+
+### `mals-lsp-adapter`
+
+
+
+### `mals-engine`
