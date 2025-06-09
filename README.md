@@ -103,6 +103,73 @@ LSP:
 
 ### `mals-lsp-adapter`
 
-
+```
+--- PASS: TestScannerSplit (0.00s)
+    --- PASS: TestScannerSplit/complete_valid_message (0.00s)
+    --- PASS: TestScannerSplit/incomplete_message_no_separator (0.00s)
+    --- PASS: TestScannerSplit/incomplete_message_partial_content (0.00s)
+    --- PASS: TestScannerSplit/zero_length_content (0.00s)
+    --- PASS: TestScannerSplit/invalid_content_length (0.00s)
+    --- PASS: TestScannerSplit/exact_content_length_match (0.00s)
+    --- PASS: TestScannerSplit/content_longer_than_specified (0.00s)
+    --- PASS: TestScannerSplit/multiple_messages_in_buffer (0.00s)
+    --- PASS: TestScannerSplit/empty_input (0.00s)
+PASS
+ok      mals-lsp-adapter/test   0.002s
+```
 
 ### `mals-engine`
+
+```
+--- PASS: TestScannerSplit (0.00s)
+    --- PASS: TestScannerSplit/complete_valid_message (0.00s)
+    --- PASS: TestScannerSplit/incomplete_message_no_separator (0.00s)
+    --- PASS: TestScannerSplit/incomplete_message_partial_content (0.00s)
+    --- PASS: TestScannerSplit/zero_length_content (0.00s)
+    --- PASS: TestScannerSplit/invalid_content_length (0.00s)
+    --- PASS: TestScannerSplit/exact_content_length_match (0.00s)
+    --- PASS: TestScannerSplit/content_longer_than_specified (0.00s)
+    --- PASS: TestScannerSplit/multiple_messages_in_buffer (0.00s)
+    --- PASS: TestScannerSplit/empty_input (0.00s)
+
+--- PASS: TestDecodeRequest (0.00s)
+    --- PASS: TestDecodeRequest/valid_request (0.00s)
+    --- PASS: TestDecodeRequest/request_with_different_method (0.00s)
+    --- PASS: TestDecodeRequest/no_separator (0.00s)
+    --- PASS: TestDecodeRequest/invalid_content_length (0.00s)
+    --- PASS: TestDecodeRequest/invalid_JSON (0.00s)
+    --- PASS: TestDecodeRequest/negative_ID (0.00s)
+    --- PASS: TestDecodeRequest/zero_ID (0.00s)
+
+--- PASS: TestDecodeNotification (0.00s)
+    --- PASS: TestDecodeNotification/valid_notification (0.00s)
+    --- PASS: TestDecodeNotification/notification_with_different_method (0.00s)
+    --- PASS: TestDecodeNotification/no_separator (0.00s)
+    --- PASS: TestDecodeNotification/invalid_JSON (0.00s)
+    --- PASS: TestDecodeNotification/invalid_content_length (0.00s)
+    --- PASS: TestDecodeNotification/long_method_name (0.00s)
+
+    --- PASS: TestEncode/encode_request (0.00s)
+    --- PASS: TestEncode/encode_notification (0.00s)
+    --- PASS: TestEncode/encode_response (0.00s)
+    --- PASS: TestEncode/encode_request_with_negative_ID (0.00s)
+    --- PASS: TestEncode/encode_LSP_method (0.00s)
+    --- PASS: TestEncode/unencodable_input (0.00s)
+
+--- PASS: TestUrlFile (0.00s)
+--- PASS: TestUrlDirectory (0.00s)
+--- PASS: TestUrlDirectorySlash (0.00s)
+
+--- PASS: TestGetLastNChars (0.00s)
+    --- PASS: TestGetLastNChars/Simple_single_line_-_get_3_chars (0.00s)
+    --- PASS: TestGetLastNChars/Single_line_-_get_more_chars_than_available (0.00s)
+    --- PASS: TestGetLastNChars/Multi-line_-_position_at_start_of_second_line (0.00s)
+    --- PASS: TestGetLastNChars/Multi-line_-_position_in_middle_of_second_line (0.00s)
+    --- PASS: TestGetLastNChars/Multi-line_-_get_last_chars_crossing_lines (0.00s)
+    --- PASS: TestGetLastNChars/Empty_content (0.00s)
+    --- PASS: TestGetLastNChars/Position_at_start_of_content (0.00s)
+    --- PASS: TestGetLastNChars/Line_beyond_content_length (0.00s)
+    --- PASS: TestGetLastNChars/Char_beyond_line_length (0.00s)
+    --- PASS: TestGetLastNChars/Zero_characters_requested (0.00s)
+    --- PASS: TestGetLastNChars/Multi-line_with_empty_lines (0.00s)
+```
